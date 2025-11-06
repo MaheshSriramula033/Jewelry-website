@@ -1,0 +1,15 @@
+# Environment variables (for extra safety)
+.env
+.env.local
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Temporary folders
+tmp/
+temp/
