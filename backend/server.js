@@ -29,13 +29,13 @@ mongoose.connect(uri)
   .catch((err) => {
     console.error(' Error connecting to MongoDB:', err.message);
   });
-const publicPath = path.join(__dirname, "public");
+const publicPath = path.join(__dirname, "../public");
 app.use(express.static(publicPath));
 
-// Root route - send index.html
 app.get("/", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
+
 
 // API to get base price
 app.get("/api/base-price", (req, res) => {
