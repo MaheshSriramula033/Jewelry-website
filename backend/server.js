@@ -30,6 +30,10 @@ mongoose.connect(uri)
     console.error(' Error connecting to MongoDB:', err.message);
   });
 
+  app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 // API to get base price
 app.get("/api/base-price", (req, res) => {
   res.json({ basePrice: 5000 });
